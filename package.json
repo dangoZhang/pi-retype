@@ -1,0 +1,61 @@
+{
+  "name": "pi-retype",
+  "version": "0.3.0",
+  "description": "Programmatic tool calling orchestration for Pi powered by TypeScript",
+  "type": "module",
+  "license": "MIT",
+  "author": "dangoZhang",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dangoZhang/pi-retype.git"
+  },
+  "homepage": "https://github.com/dangoZhang/pi-retype#readme",
+  "bugs": {
+    "url": "https://github.com/dangoZhang/pi-retype/issues"
+  },
+  "files": [
+    "README.zh-CN.md",
+    "extensions",
+    "prompts",
+    "runtime"
+  ],
+  "keywords": [
+    "pi-package",
+    "pi-coding-agent",
+    "codeact",
+    "programmatic-tool-calling",
+    "ai-agents",
+    "typescript"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/retype.ts"
+    ]
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts",
+    "prepublishOnly": "npm run check && npm test"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-agent-core": "*",
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "typebox": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-agent-core": "0.84.1",
+    "@earendil-works/pi-ai": "0.84.1",
+    "@earendil-works/pi-coding-agent": "0.84.1",
+    "@types/node": "22.19.19",
+    "tsx": "4.22.1",
+    "typebox": "1.3.7",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  }
+}
